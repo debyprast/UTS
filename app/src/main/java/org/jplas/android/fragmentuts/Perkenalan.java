@@ -44,17 +44,17 @@ public class Perkenalan extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_perkenalan, container, false);
-        nama = (EditText)findViewById(R.id.edit_nama);
-        panggilan = (EditText)findViewById(R.id.edit_panggilan);
-        tmptLahir = (EditText)findViewById(R.id.edit_tmptLahir);
-        alamat = (EditText)findViewById(R.id.edit_alamat);
-        hobi = (EditText)findViewById(R.id.edit_hobi);
-        pekerjaan = (EditText)findViewById(R.id.edit_pekerjaan);
+        nama = (EditText) nama.findViewById(R.id.edit_nama);
+        panggilan = (EditText) panggilan.findViewById(R.id.edit_panggilan);
+        tmptLahir = (EditText) tmptLahir.findViewById(R.id.edit_tmptLahir);
+        alamat = (EditText) alamat.findViewById(R.id.edit_alamat);
+        hobi = (EditText) hobi.findViewById(R.id.edit_hobi);
+        pekerjaan = (EditText) pekerjaan.findViewById(R.id.edit_pekerjaan);
 
-        jkelamin = (Spinner)findViewById(R.id.spn_jkelamin);
-        tglLahir = (Button) findViewById(R.id.btn_tglLahir);
-        proses = (Button) findViewById(R.id.btn_proses);
-        kalimat = (TextView) findViewById(R.id.txt_kalimat);
+        jkelamin = (Spinner) jkelamin.findViewById(R.id.spn_jkelamin);
+        tglLahir = (Button) tglLahir.findViewById(R.id.btn_tglLahir);
+        proses = (Button) proses.findViewById(R.id.btn_proses);
+        kalimat = (TextView) kalimat.findViewById(R.id.txt_kalimat);
 
         List<String> listKelamin = new ArrayList<String>();
         listKelamin.add("Laki-Laki");
