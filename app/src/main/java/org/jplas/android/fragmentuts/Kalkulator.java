@@ -18,13 +18,14 @@ import android.widget.EditText;
  */
 public class Kalkulator extends Fragment {
 
-    View view;
+    private EditText inputText;
     private EditText angka_pertama,angka_kedua,hasil;
     private Button tambah,kurang,kali,bagi;
     private int a,b;
 
-    public Kalkulator() {
-        // Required empty public constructor
+    public Kalkulator(View view) {
+        String a = inputText.getText().toString();
+        inputText.setText(a);
     }
 
 
@@ -37,9 +38,9 @@ public class Kalkulator extends Fragment {
         return hasil;
 
         angka_pertama = (EditText) angka_pertama.findViewById(R.id.angka_pertama);
-        return angka_pertama;
+        angka_pertama.setText(Integer.valueOf(a));
         angka_kedua = (EditText) angka_kedua.findViewById(R.id.angka_kedua);
-        return angka_kedua;
+        angka_kedua.setText(Integer.valueOf(b));
 
         tambah = (Button) tambah.findViewById(R.id.btn_tambah);
         tambah.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +49,7 @@ public class Kalkulator extends Fragment {
                 a = Integer.valueOf(angka_pertama.getText().toString());
                 b = Integer.valueOf(angka_kedua.getText().toString());
 
-                hasil.setText(fungtion_tambah(a,b));
+                hasil.(fungtion_tambah(a,b));
             }
         });
 
@@ -60,7 +61,7 @@ public class Kalkulator extends Fragment {
                 a = Integer.valueOf(angka_pertama.getText().toString());
                 b = Integer.valueOf(angka_kedua.getText().toString());
 
-                hasil.setText(fungtion_kurang(a,b));
+                hasil.s(fungtion_kurang(a,b));
             }
         });
 
