@@ -14,12 +14,14 @@
 
         <EditText
             android:id="@+id/angka_pertama"
+            android:inputType="number"
             android:hint="Masukkan Angka"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <EditText
             android:id="@+id/angka_kedua"
+            android:inputType="number"
             android:hint="Masukkan Angka"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -63,7 +65,8 @@
             android:id="@+id/hasil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Hasil"/>
+            android:hint="Hasil"
+            />
 
     </LinearLayout>
 

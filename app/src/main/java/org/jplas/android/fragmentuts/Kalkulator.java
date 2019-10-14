@@ -3,6 +3,7 @@ package org.jplas.android.fragmentuts;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import android.widget.EditText;
  */
 public class Kalkulator extends Fragment {
 
+    View view;
     private EditText angka_pertama,angka_kedua,hasil;
     private Button tambah,kurang,kali,bagi;
     private int a,b;
@@ -27,15 +29,17 @@ public class Kalkulator extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kalkulator, container, false);
 
-        hasil = (EditText) hasil.findViewById(R.id.hasil);
+        final View hasil = inflater.inflate(R.layout.fragment_kalkulator,container,false);
         return hasil;
+
         angka_pertama = (EditText) angka_pertama.findViewById(R.id.angka_pertama);
+        return angka_pertama;
         angka_kedua = (EditText) angka_kedua.findViewById(R.id.angka_kedua);
+        return angka_kedua;
 
         tambah = (Button) tambah.findViewById(R.id.btn_tambah);
         tambah.setOnClickListener(new View.OnClickListener() {
